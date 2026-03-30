@@ -1,16 +1,14 @@
 {
-  "name": "iserv-simulation-project",
+  "name": "iserv-simulation",
   "version": "1.0.0",
-  "description": "Educational cyber-security project",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "path": "^0.12.7"
+    "express": "^4.18.2"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": "18.x"
   }
 }
