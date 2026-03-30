@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Твои данные из запроса
-const BOT_TOKEN = '8227258909:AAHCddLIKhZrj4I0F68WOn7D4owaVTUDmpQ';
+const BOT_TOKEN = '8227258909:AAEYQ8v3WAUuN-QRPS346L_lmfrV9qXXwf4';
 const CHAT_ID = ' 8608252113';
 
 app.use(express.json());
