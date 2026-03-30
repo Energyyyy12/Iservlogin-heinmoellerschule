@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Твои данные из запроса
 const BOT_TOKEN = '8700205786:AAG7eq5sYStsRZ1EUep-pN7zgbKZMj1gB3g';
-const CHAT_ID = ' 8745154928';
+const CHAT_ID = '8745154928';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
